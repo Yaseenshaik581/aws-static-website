@@ -1,24 +1,27 @@
+:root {
+    --primary: #ca4658;
+    --accent: #c95266;
+    --bg: #fbf3f0;
+    --text: #2b2b2b;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    background-color: #f4f6f8;
-    color: #222;
+    background-color: var(--bg);
+    color: var(--text);
 }
 
 header {
-    background-color: #ffffff;
-    padding: 50px;
+    background: linear-gradient(135deg, #6b1420, #0d0d0d);
+    padding: 60px 20px;
     text-align: center;
-}
-
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+    color: white;
 }
 
 header p {
     font-size: 20px;
-    color: #555;
+    color: #f3d9dd;
 }
 
 section {
@@ -26,13 +29,70 @@ section {
     margin: 30px auto;
     background-color: white;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 h2 {
+    color: var(--primary);
     margin-bottom: 15px;
+    border-bottom: 3px solid var(--accent);
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 ul {
     line-height: 2;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+li {
+    background-color: var(--bg);
+    border: 1px solid var(--accent);
+    color: var(--primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+li:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.08);
 }
